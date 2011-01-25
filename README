@@ -1,0 +1,8 @@
+Goodies: Useful tools that don't belong in the main library
+
+
+Convert from a directory of files to SequenceFiles with key/value encoded with TypedBytes.  The key ends up being the name of the file, the value is the value of the file in bytes.
+
+python files_to_b64.py <your_dir> <b64_out>
+hadoop fs -put <b64_out> <hdfs_b64_out>
+python b64_to_tb.py <hdfs_b64_out> <hdfs_tb_out>
